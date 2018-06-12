@@ -324,6 +324,8 @@ export class FileUploader {
           sendable.append(key, paramVal);
         });
       }
+      // Add webkitRelativePath
+      sendable.append('webkitRelativePath', item._file.webkitRelativePath);
 
       if (this.options.parametersBeforeFiles) {
         appendFile();
